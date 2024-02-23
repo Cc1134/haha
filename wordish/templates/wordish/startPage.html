@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>start page</title>
+    <link rel="stylesheet" href="../../static/wordish.css" />
+  </head>
+
+  <body>
+    <div id="status_container">
+      <div id="message">{{ message }}</div>
+    </div>
+    <form action="start" method="post">
+      <div id="target_container">
+        <label id="target_label">Hint: a place</label>
+        <label id="target_text" name="newTarget" />
+        <button id="start_button" type="submit">Start</button>
+      </div>
+
+      <div>&nbsp;</div>
+      {% csrf_token %}
+    </form>
+  </body>
+</html>
